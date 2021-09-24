@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const width = 28
   let score=0;
   let checkdead;
+  const timercm=14000;
   let modef;
   const grid = document.querySelector('.grid')
   const layout = [
@@ -81,7 +82,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.addEventListener('keydown',movePacman);
     ghosts.forEach(ghost =>moveGhosts(ghost));
     //switch between 'scatter mode' and 'chase mode' every 30 seconds
-    modef=setInterval(changeMode,30000)
+    modef=setInterval(changeMode,timercm)
 
   }
   startButton.addEventListener('click',startGame);
